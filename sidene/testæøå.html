@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+		<html>
+		  <head>
+			<!-- laget av: Ole, Kontrollert av Gabriel -->
+			<meta name="author" content="GOTC ~ Gruppe 1"> <!--Forfatter -->
+			<meta name="keywords" content="Vikerfjell, høyfjell, Hønefoss, vestre Ådal, Buskerud"> <!--søkeord -->
+			<meta http-equiv="content-type" content="text/html; charset=utf-8"> <!--Spesifiserer bokstav-kode type som er brukt -->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Sørger for responsivt design -->
+			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"> <!-- responsivt kart i footeren -->
+			<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script> <!-- responsivt kart i footeren -->
+			<link rel="stylesheet" type="text/css" href="../CSS/Stiler.css"><!--Linker til CSS-dokumentet -->
+			<!-- 
+			**faviconer for forskjellige størrelser under. 
+			**Kan også legges til som "applikasjon" hos Iphone, 
+			**slik ikonet vises på hjem-skjermen.
+			-->
+			<link rel="icon" type="image/png" href="../Bilder/icon2.png" sizes="16x16"> 
+			<link rel="icon" type="image/png" href="../Bilder/icon2.png" sizes="32x32">  
+			<link rel="icon" type="image/png" href="../Bilder/icon2.png" sizes="96x96">
+			<link rel="apple-touch-icon" href="../Bilder/icon2.png"> // 120px  
+			<link rel="apple-touch-icon" sizes="180x180" href="../Bilder/icon2.png">  
+			<link rel="apple-touch-icon" sizes="152x152" href="../Bilder/icon2.png">  
+			<link rel="apple-touch-icon" sizes="167x167" href="../Bilder/icon2.png">
+			<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+			<title>Visit Vikerfjell</title>
+		  </head>
+		  <body>
+
+
+			<!-- laget av: Tobias, kontrollert av Christian -->
+			<header>
+			  <div class="header-image" src="../Bilder/header.jpg" height="auto" width="auto">
+			</div>
+			</header><nav id='nav' role='navigation'>
+			  <input id='Sookebar' class='Sookebar' type='text' name='search' placeholder='Søk..'>
+				<i class='fa fa-search Sook' onclick='sok()' aria-hidden='true'></i>
+					<ul class='ULmain'>
+						<li><a class = 'bildelink' href='../sidene/default.html'><img class='bilde-logo' src='../Bilder/logo.png' height='180px' width='180px'></a>
+						</li><li><a href=default.html value='1' name='menyelement'>Hjem</a></li><li><a href=G2Hytter.html value='762' name='menyelement'>G2Hytter </a></li><li><a href=# value='754' name='menyelementfocus' style=font-weight:Bold;>testæøå</a></li><li><a href=Service5.html value='763' name='menyelement'>Service5</a></li><li><a href=test123.html value='752' name='menyelement'>test123</a></li><li><a href=gruppen2.html value='759' name='menyelement'>gruppen2</a></li><li><a href=Hytter.html value='41' name='menyelement'>Hytter</a></li><li><a href=Veiogføre.html value='43' name='menyelement'>Vei og føre</a></li><li><a href=Kontakt.html value='46' name='menyelement'>Kontakt</a></li><li><a href=Aktiviteter.html value='139' name='menyelement'>Aktiviteter</a></li><li><a href=Aktuelt1.html value='380' name='menyelement'>Aktuelt1</a></li>
+				<li><img class='flaggNorge' height='50px' width='50px'></li>
+				<li><img class='flaggUK' height='50px' width='50px'></li>
+
+
+				    <script>
+					  function sok(){
+							var x =document.getElementById('Sookebar');
+				        if(x.style.display === 'none'){
+				        x.style.display = 'block';}
+				        else{x.style.display = 'none';
+				        }
+							}
+							</script>
+
+			</ul>
+
+				<!-- burger meny
+				Vi har benyttet oss av en burger meny som krediteres til Erik Terwan, 24 November 2015. (også kreditert i kildelisten våres i rapporten)
+				Vi har gjort enkelte endringer i HTML og CSS koden, der iblant slik meny elementene blir generert og listet opp i burgermenyen.
+				-->
+
+				<div class='ULburger' id='menuToggle'>
+
+  
+					<!-- en checkbox som blir brukt, så man kan bruke checked-selektor på den. -->
+					
+					<input class='burgerinput' type='checkbox' />
+					
+					<!-- 3 span-tagger som blir seendes ut som en hamburger -->
+
+					<span></span>
+					<span></span>
+					<span></span>
+
+					<ul id='menu'>
+			
+						<li class='menyVenstre'><a href=default.html value='1' name='menyelement'>Hjem </a></li><br>
+			
+						<li class='menyVenstre'><a href=G2Hytter.html value='762' name='menyelement'>G2Hytter  </a></li><br>
+			
+						<li class='menyVenstre'><a href=testæøå.html value='754' name='menyelement'>testæøå </a></li><br>
+			
+						<li class='menyVenstre'><a href=Service5.html value='763' name='menyelement'>Service5 </a></li><br>
+			
+						<li class='menyVenstre'><a href=test123.html value='752' name='menyelement'>test123 </a></li><br>
+			
+						<li class='menyVenstre'><a href=gruppen2.html value='759' name='menyelement'>gruppen2 </a></li><br>
+			
+						<li class='menyVenstre'><a href=Hytter.html value='41' name='menyelement'>Hytter </a></li><br>
+			
+						<li class='menyVenstre'><a href=Veiogføre.html value='43' name='menyelement'>Vei og føre </a></li><br>
+			
+						<li class='menyVenstre'><a href=Kontakt.html value='46' name='menyelement'>Kontakt </a></li><br>
+			
+						<li class='menyVenstre'><a href=Aktiviteter.html value='139' name='menyelement'>Aktiviteter </a></li><br>
+			
+						<li class='menyVenstre'><a href=Aktuelt1.html value='380' name='menyelement'>Aktuelt1 </a></li><br>
+					
+					</ul>
+				</div>	
+		</nav><div class='mainContent'>
+					<div class='content'>
+					<div class='content-wrapper'>
+								
+									<article class='shortcut1'>
+										<div id='bilde1' style='background:url(../Bilder/FinnerIkkeBilde.jpg); min-height:150px; background-repeat:no-repeat; background-position:center'>
+										</div>
+										<div id='tekst1'>
+											<h2 class='boldtittel' >test1213</h3>
+											<p><strong>asodkapodk...</strong></p>
+											<p><a href=testæøå/test1213.html >Les mer</a></p>
+										</div>
+									</article>
+							
+
+								<article class='shortcut2'>
+									<div id='bilde2' style='background:url(../Bilder/FinnerIkkeBilde.jpg); min-height:150px; background-repeat:no-repeat; background-position:center'>
+									</div>
+									<div id='tekst2'>
+										<h2 class='boldtittel' >test12133</h2>
+										<p><strong>asodkapodk...</strong></p>
+										<p><a href=testæøå/test12133.html >Les mer</a></p>
+									</div>
+								</article>
+							
+					</div>
+					</div>
+					</div>
+					</div>
+				
+		  <footer>
+				<div id="wrapper_foot">
+
+				<!-- Sosiale medier knapper med hyperlink til de forskjellige stedene (Snapchat mangler link til vikerfjell sin snapchat) -->
+					<div class="footer2">
+						<div class="sosmed">
+							<p>Følg oss på sosiale medier</p>
+							<ul class = "sosul">
+								<a href="https://www.facebook.com/Tosseviksetra/">
+									<img border="0" alt="sosial" src="../Bilder/fb.png" height="50" width="50">
+								</a>
+
+								<a href="http://www.snapchat.com/">
+									<img border="0" alt="sosial" src="../Bilder/sc.png" alt="Smiley face" height="48" width="48">
+								</a>
+
+								<a href="https://www.instagram.com/explore/tags/Vikerfjell/">
+									<img border="0" alt="sosial" src="../Bilder/ig.png" alt="Smiley face" height="52" width="52">
+								</a>
+							</ul>
+						</div>
+					</div>
+					<div class="footer2">
+						<div class="shortcut">
+							<p><b>Felles</b></p>
+								<table>
+								  <tr>
+									<td><a href="../sidene/default.html">Hjem</a></td>
+									<td><a href="../sidene/hytter.html">Hytter</a></td>
+								  </tr>
+								  <tr>
+									<td><a href="../sidene/vei_og_fore.html">Vei og føre</a></td>
+									<td><a href="../sidene/kontakt.html">Kontakt</a></td>
+								  </tr>
+									<tr>
+									<td><a href="../sidene/aktuelt.html">Aktuelt</a></td>
+									<td><a href="../sidene/tomter.html">Hyttetomter</a></td>
+								  </tr>
+
+								</table>
+							<p><b>Admin</b></p>
+								<table>
+									<tr>
+										<td><a href="../php/logginn.php">Logg inn</a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+
+					<!--  Footer kontakt-informasjon -->
+					<div class="footer2">
+						<div class="kontakt1">
+							<p><b>Kontakt</b></p>
+							<p><b> E-post: <a href="#epost" style=color:#66ccff; >post@vikerfjell.com</a></b></p>
+							<p><b>Telefon: </b>930 11 567</b></p>
+							<p><b>Adresse:</b> Elsrud Gård</b></p>
+							<p><b>Vestre ådal 922, 3516 Hønefoss</b></p>
+						</div>
+					</div>
+				</div>
+		  </footer>
+		  </body>
+		  </html>

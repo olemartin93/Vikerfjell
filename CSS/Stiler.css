@@ -1,0 +1,846 @@
+﻿/* CSS Document */
+html{
+  margin:0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+  padding: 23px 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 400px; /* bildehøyden */
+  width: 100%;
+  overflow: hidden;
+  position:relative;
+  margin: 0 auto;
+  background-image:url("../Bilder/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  z-index: 1;
+  border-bottom:3px solid #374049;
+
+}
+.header-image{
+
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+
+}
+.flaggNorge{
+right:70px;
+top:2px;
+z-index:10;
+height:20px;
+width:30px;
+position: absolute;
+background-image:url("../Bilder/flag_norway.jpg");
+background-size: 100%;
+
+}
+.flaggUK{
+right:105px;
+top:2px;
+z-index:10;
+height:20px;
+width:30px;
+position: absolute;
+background-image:url("../Bilder/flag_uk.jpg");
+background-size: 100%;
+}
+
+.Sook{
+right:150px;
+top:2px;
+z-index:1;
+height:20px;
+width:20px;
+background-color: white;
+position: absolute;
+border: none;
+font-family:inherit;
+}
+
+
+
+.Sookebar{
+margin-top:2px;
+right:175px;
+top:0px;
+z-index:1;
+height:18px;
+width:200px;
+position: fixed;
+display:none;
+background-color:white;
+}
+
+.boldtittel{
+padding:0;
+}
+a.button {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1px 6px;
+
+    font: 13.3333px Arial;
+    text-rendering: auto;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: black;
+
+    border: 2px solid black;
+    border-image: initial;
+
+    background-color: white;
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    cursor: default;
+}
+
+a.button:active {border-style: inset;}
+
+
+.bilde-logo{/* Logo Vikerfjell */
+  top:-54px;;
+  left:20px;
+  position:absolute;
+}
+.bilde-innlegg{
+  z-index: 100;
+}
+
+nav{ /*navigeringsmenyen*/
+  background-color: white;
+  //background-color:rgba(255,255,255,0.85);
+  min-height:80px;
+  margin: 0;
+  padding:0;
+  overflow:hidden;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  border-bottom:3px solid #374049;
+  //border-top:3px solid #374049;
+
+}
+
+nav ul{ /*lista text osv*/
+  margin:0;
+  padding:0;
+  padding-top:5px;
+  background-color: white;
+  height: auto;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 14pt;
+  list-style-type: none;
+  padding-left:200px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style-type: none;
+
+}
+
+nav ul li a{ /* selve knappen*/
+  color:black;
+  background-color: white;
+  display:block;
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  margin:0;
+}
+
+li a {
+    padding:20px 16px;
+    vertical-align: baseline;
+}
+nav ul li a:hover {
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  width:auto;
+  height: auto;
+  display:table;
+  background-color: grey;
+  /* fonttexttyper under hentet fra "https://css-tricks.com/snippets/css/better-helvetica/" */
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+}
+.bildeplassering{
+  position:relative;
+  float:right;
+  height: 100%;
+  width: 100%;
+  top:0;
+}
+/* laget av: Christian og Gabriel, kontrolert av Tobias og Ole */
+.mainContent{ /* Hovedinnholdet på siden */
+  line-height: 25px;
+  border-radius: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.content{
+  width:91%;
+  float:none;
+  margin:auto;
+  padding: 0%;
+  background: white;
+  height: 100%;
+  min-width:960px;
+  padding-top: 2%;
+
+
+
+
+
+}
+.enkeltcontent{
+  width:91%;
+  margin:auto;
+  padding: 0%;
+  background: white;
+  height: 100%;
+  min-width:320px;
+  display:inline-block;
+}
+
+.content-wrapper{
+  width:960px;
+  margin:auto;
+  //margin-top:0px;
+  //margin-bottom: 0px;
+  height: 100%;
+  position: relative;
+  //display: inline-block;
+  overflow:hidden;
+  
+
+}
+.content-wrapperInnhold{
+  margin-top:15px;
+  margin-bottom: 15px;
+  height: auto;
+  position: relative;
+  min-height:200px;
+  display:inline-block;
+
+}
+.rightContent{
+  padding-left: 2%;
+  padding-right:2%;
+  position: relative;
+  float:left;
+  width: 96%;
+  height: auto;
+  min-width:270px;
+  display:inline-block;
+
+}
+.leftContent{
+  position: relative;
+  float:left;
+  width: 33.33333%;
+  height: 200px;
+  min-width:320px;
+
+
+}
+
+.shortcut1{
+  position: relative;
+  float:left;
+  width: 25.33%;
+  height: 300px;
+  margin: auto;
+  min-width: 320px;
+  outline:1px solid rgba(0, 0, 0, 0.2);
+  background-color:white;
+
+
+
+}
+#bilde1{
+  max-width: 99%;
+  height: 50%;
+  margin:auto;
+  border: 0;
+  padding-top: 5px;
+}
+#bilder1{
+outline: none;
+border: 0;
+
+
+}
+
+#tekst1{
+  width:80%;
+  height: 30%;
+  margin: 5% 10% 5% 10%;
+}
+.shortcut2{
+  position: relative;
+  float:left;
+  width: 25.33%;
+  height: 300px;
+  margin: auto;
+  min-width: 320px;
+  outline:1px solid rgba(0, 0, 0, 0.2);
+  background-color:white;
+}
+#bilde2{
+  max-width: 99%;
+  height: 50%;
+  margin:auto;
+  padding-top: 5px;
+}
+#tekst2{
+  width:80%;
+  height: 30%;
+  margin: 5% 10% 5% 10%;
+}
+
+.shortcut3{
+  position: relative;
+  float:left;
+  width: 25.33%;
+  height: 300px;
+  margin: auto;
+  min-width: 320px;
+  outline:1px solid rgba(0, 0, 0, 0.2);
+  margin-left:auto;
+  background-color:white;
+}
+#bilde3{
+  max-width: 99%;
+  height: 50%;
+  margin:auto;
+  border: 0;
+  padding-top:5px;
+  
+}
+#tekst3{
+  width:80%;
+  height: 30%;
+  margin: 5% 10% 5% 10%;
+}
+
+
+.bottomContent{
+  background-color: #FFF;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius: 5px;
+  padding: 3% 5%;
+  margin-top:15px;
+  margin-bottom: 15px;
+}
+
+.top-sidebar{ /* sidebar top høyre i innholdet*/
+  width: 21%;
+  float: left;
+  background-color: #FFF;
+  -moz-border-radius:5px;
+  -webkit-border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+  padding: 2% 3%;
+}
+
+.middle-sidebar{ /* sidebar mid høyre i innholdet*/
+  width: 21%;
+  float: left;
+  background-color: #FFF;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius: 5px;
+  margin-top:15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 2% 3%;
+}
+
+.bottom-sidebar{ /* sidebar bunn høyre i innholdet*/
+  width: 21%;
+  float: left;
+  background-color: #FFF;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius: 5px;
+  margin: 15px 15px 15px 15px;
+  padding: 2% 3%;
+}
+
+/*##########________FOOTER_______###########*/
+/* laget av: Ole, kontrolert av Tobias, Gabriel og Christian */
+/*----Verdier for Footer-----*/
+footer{
+  text-align: left;
+  color:white;
+  background-color: #374049;
+  position: relative;
+  width:100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display:table-row;
+  border:2px solid red;
+  min-height: 100%;
+  height: auto;
+}
+p{
+  margin:0;
+}
+
+p.fellesLeft {
+    text-align: center;
+    margin-right: 160px;
+}
+p.adminFlytt{
+	text-align: center;
+    margin-right: 160px;
+}
+
+
+
+.footer2{
+  width: 31.33%;
+  float:left;
+  position: relative;
+  padding-left:1%;
+  padding-right:1%;
+  padding-top:1%;
+  padding-bottom:1%;
+  text-align: center;
+  min-width:300px;
+}
+.shortcut{
+  width: 100%;
+  height: 96%;
+  position: relative;
+
+}
+
+div.shortcut table,td,a:hover{
+  text-decoration: underline;
+}
+div.shortcut table,td,a{
+  text-decoration:none;
+  padding: 0;
+
+}
+div.shortcut table, td {
+    text-align:left;
+    margin-left:auto;
+   margin-right:auto;
+   margin-bottom: 20px;
+}
+div.shortcut p, b{
+  margin-top: 20px;
+}
+div.shortcut th{
+  padding:20px;
+  color:White;
+}
+div.shortcut table, td, a{
+  padding:10px;
+  color:#66ccff;
+}
+
+/*---------Område for web2.0 (FB,IG & SC)----------*/
+.sosmed{
+width:100%;
+height: 100%;
+//background-color: blue;
+position: relative;
+padding-top:3%;
+}
+
+.sosmed a{
+	color:#374049;
+}
+
+.sosul{
+	padding-left:0px;
+}
+
+/*--------Kontakt Informasjon for vikerfjell (epost, tlf, adresse--------*/
+.kontakt1{
+	float: left;
+  position:relative;
+  color:white;
+  width:100%;
+  height:98%;
+  text-align:left;
+  line-height: 25px;
+  padding:2%;
+}
+div.kontakt1 p, b{
+  padding:10px;
+}
+.bildelink{
+padding:0;
+}
+
+/* ~~~~~Størrelse på font for "Kontakt:"~~~~~~~*/
+
+/* CSS burger meny:
+*Under vises CSS koden til burger menyen, der vi har gjort små endringer i forhold til orginalen som *er kreditert i kildelisten våres. Vi har tilpasset burger menyen slik den passer til Visit Vikerfjell, og *CSS-koden fungerer med nettstedet vi har laget.
+ */
+
+ul {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #66ccff;
+  transition: color 0.3s ease;
+}
+
+.ULburger a:hover
+{
+  color: tomato;
+}
+
+.flytte{
+	top:0px;
+}
+
+
+#menuToggle
+{	
+	
+  display: none;
+  position: relative;
+  top: 30px;
+  left: 40px;
+  //background-color:rgba(0,0,255,1);
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+	
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #374049;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+  
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+	border:black solid;
+  position: absolute;
+  width: 217px;
+  height:auto;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  text-align:left;
+  background:white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  left:0;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+.ULburger{
+	width:100%;
+	margin:0;
+  padding:0;
+  display:none;
+  background-color: white;
+  height: 73px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14pt;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 60em){
+	header{
+		height: 325px;
+	}
+  
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .content-wrapper{
+  height:600px;
+  width:640px;
+  }
+  footer{
+  height:600px;
+  text-align:center;
+  }
+      .ULmain {
+        display:none;
+    }
+	#menuToggle{
+		display:block;
+		
+	}
+	.ULburger{
+		display:block;
+		position:absolute;
+		height:0;
+		width:0;
+		z-index:40;
+	}
+	.header-image{
+		top:0;
+	}
+	nav{
+		position:absolute;
+		overflow:visible;
+		height:75px;
+	}
+	
+	.Sook{
+		right:0;
+		position:absolute;
+    
+	}
+  body{
+  overflow: hidden; width: inherit;
+  }
+	
+	
+	.Sookebar{
+		right:25px;
+		
+	}
+	
+	li a{
+		padding: 5px 16px;
+	}
+  .footer2{
+  }
+  .content{
+  min-width:670px;
+  }
+  
+}
+
+@media screen and (max-width: 40em) {
+	header {
+		height: 275px;
+	}
+  
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .content-wrapper{
+  height:900px;
+  width:320px;
+  }
+  
+  .footer2{
+  float:none;
+  margin:auto;
+  }
+  .content{
+  min-width:320px;
+  //margin:0;
+  }
+  
+  body{
+  overflow: hidden; width: inherit;
+  }
+  .rightContent{
+  width:90%;
+  padding-right:8%;
+  }
+  
+}
+
+@media screen and (max-width: 20em){
+	header{
+		height: 200px;
+	}
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+div.shortcut table, td, a {
+    padding: 10px;
+    color: #66ccff;
+    margin: 0;
+}
+  
+  
+  p.fellesLeft {
+    text-align: center;
+    margin-right: 200px;
+	}
+	
+	p.adminFlytt{
+	text-align: center;
+    margin-right: 200px;
+}
+	.content-wrapper{
+		height:auto;
+	}
+	.footer2{
+		margin:auto;
+		padding:0;
+	}
+  .content{
+  margin:0;
+  }
+  .mainContent{
+  margin:0;
+  background-color:white;
+  }
+  .Sook{
+  right:20px;}
+
+
+}
+
+
+
+/*  media query */
+
+
+}
